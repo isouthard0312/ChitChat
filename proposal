@@ -1,0 +1,19 @@
+# **Project Proposal**
+
+1. **The Big Idea**:
+The main goal of my project is to allow artists to showcase their work and get paid for it. They should also be able to receive constructive feedback as well. 
+1. **Learning Goals**:
+I hope that this will help me learn backend web development with python and also help me relearn my old front end skills from web design class.
+1. **Implementation Plan**: 
+I will utilize Django to help with Python programming and Html/CSS and Javascript for the desing portion.
+1. **Project Schedule**:
+week 1 - purchase domain name and hosting service temporarily.
+week 2 - design layout of website and implement basic structure, login feature, sign out feature, homepage 
+week 3, 4, & 5 - add python features: multimedia/Youtube APIs and login/Google/Paypal APIs, posting capability where content is viewable to other users online.
+week 6 & 7 - continue fixing design of the website: adding color scheme, customizable settings
+week 8 - have someone else test the website and make changes/fixes to bugs
+1. **Collaboration plan**:
+I do not plan to collaborate with anyone on this project however I will try to find someone at the end of my project to test out my website as an example user.
+1. **Risks**:
+The biggest risk of this project is the payment API portion of the python programming. 
+1. **Additional Course Content**: APIs
