@@ -1,0 +1,44 @@
+{% extends 'landing/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class = "container border-top ">
+    <div class = "row justify-content-center mt-3 ">
+        
+    </div>
+
+    <div class = "container border-top">
+        <div class = "row justify-content-center mx-auto card border-light mb-5" style="max-width: 30rem;">
+        <div class = "card-header text-center border-bottom">
+            Add a Drawing!
+        </div>
+            <div class = "card-body mx-auto position-relative">
+                <form form method='POST' action='{{ action_url }}' enctype='multipart/form-data'>
+                    {% csrf_token %}
+                    {{ form | crispy }}
+                    <div class = 'd-grid gap-2'>
+                        <button class="btn btn-secondary my-2 my-sm-0">Submit</button>
+                    </div>
+                </form>
+            </div>
+            </div>
+        </div>
+    {% for post in post_list %}
+    <div class = "row justify-content-center mt-3">
+        <div class = "col-md-5 col-sm-12 border-bottom card border-light mb-5" >
+            <p><strong>{{ post.author }}</strong> {{ post.created_on }}</p>
+            <p>{{ post.body }}</p>
+            <div class="row justify-content-center mt-3">
+                <img src="{{ post.art.url }}" class="card-img-top img-fluid card border-light p-0 mb-3" alt="{{ post.title }}" height= 200 width = 200>
+                </div> 
+                <!--for getting primary key of every post, link on posts now active-->
+            <a href= "{% url 'post_detail' post.pk %}" class = "stretched-link"></a> 
+        </div>
+            <div class="btn-group-vertical">
+                <button type="button" class="btn btn-primary">Button</button>
+                <button type="button" class="btn btn-primary">Button</button>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock content %}
