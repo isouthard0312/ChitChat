@@ -24,14 +24,14 @@
       href="{% url 'index' %}"
       {% endif %}
   
-      ><i class="fas fa-comment"></i> ChitChat </a>
+      > ChitChat </a>
       <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         </ul>
-        <form class="d-flex">
-          <div class="input-group">
-          <span class="input-group-text" id="basic-addon1">@</span>
-          <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+        <form class="form-inline">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
       </div>
         </form>
         {% if user.is_authenticated %}
