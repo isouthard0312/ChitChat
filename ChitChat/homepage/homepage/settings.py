@@ -160,3 +160,5 @@ EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' #sends all emai
 MEDIA_URL = "/media/"
 MEDIA_ROOT = BASE_DIR / 'media'
 
+import django_heroku
+django_heroku.settings(locals())
